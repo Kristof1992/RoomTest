@@ -38,7 +38,6 @@ class DessertsDatabaseTest {
     @Test
     @Throws(NullPointerException::class)
     fun checkDbInstance() {
-        dessertsDao
         TestCase.assertNotNull(dessertsDao)
     }
 }

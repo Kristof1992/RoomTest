@@ -18,6 +18,9 @@ interface DessertsDatabaseDao {
     @Query("SELECT * FROM desserts ORDER BY dessertID ASC")
     fun getAll(): List<Desserts>
 
+    @Query("SELECT * FROM desserts ORDER BY dessertID ASC LIMIT 1")
+    fun getFirstDessert() : Desserts?
+
     @Query("DELETE FROM desserts")
     fun deleteAll(): Int
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.kristofs.mysmallroom.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/title_fragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_dessertsInventoryFragment"
+            app:destination="@id/dessertsInventoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dessertsInventoryFragment"
+        android:name="com.kristofs.mysmallroom.dessertstracker.DessertsInventoryFragment"
+        android:label="DessertsInventoryFragment"
+        tools:layout="@layout/dessert_inventory_fragment"/>
+</navigation>
